@@ -1,1 +1,28 @@
-this is the doc for notes, Policy: make all point values int.
+this is the doc for notes/specs
+
+Policy: make all point values int.
+ 
+input:
+  mandatory: legend list, csv file for [action type]-[point value] pair
+  optional:
+
+
+functionalities:
+- read csv file of last scoreboard turn into dict, spit it out
+- add new [person-point] pair
+- add new [person-task] pair
+- print top 5 point earners
+---
+- add new [person list- point] pair
+- add new [peron list - task] pair
+- option to print top x point earners
+
+bonus:
+- save/write to file updated scores
+- add new [person-task list] pair
+
+
+policies:
+- all changes must be saved back into the file for changes to take effect
+- any changse to the point value must be completed in the legend.csv file itself (changing point value, adding extra task)
+- once the points have been tallied, there is no telling how many points were from which tasks, and there is no option to remove all the points associated with the same task in the past (i.e. if groupme messages used to be worth points but they are no longer, there is no way to retroactively identify how many points earned are from groupme messages to remove them)

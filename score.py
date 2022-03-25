@@ -33,7 +33,8 @@ def update(adict, instr_str):
 parser = argparse.ArgumentParser()
 parser.add_argument("legend", help='for table of action-point value pair', type=argparse.FileType('r+'))
 parser.add_argument("-l","--load",help="load info from file into dict",type=argparse.FileType('r+', encoding='latin-1'))
-parser.add_argument("-a","--add",help='for adding the same points to a list of people')
+parser.add_argument("-a","--add",help='for adding the same points to a list of people') #TODO wrong format for option
+#add argument for top 5 point earners
 args=parser.parse_args()
 
 csv2dict(args.legend, 'Action','value', legend)
