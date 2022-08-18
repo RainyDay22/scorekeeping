@@ -1,20 +1,34 @@
+
+mar24
+Documentation needs to be up to date since I'm having trouble to pick up the project >6 months later.
+
+current functionalities/state of things:
+load works
+
+future plans:
+write user manual
+what is happening with github
+
+
+progress today:
+documented, wrote specs, made future plan
 #!/usr/local/cs/bin/python3                                                                         
 import csv
 import argparse
 import re
 
-board = { 'Marshall E':15, "Carl Bartender":99}
-filetable ={}
-legend = {}
+board = { 'Marshall E':15, "Carl Bartender":99} #people-points dict
+filetable ={} 
+legend = {} # action-points dict
 
-def checkAdd(string):
+def checkAdd(string): #confusing
     flag = re.findall("\([A-Za-z]+(,[A-Za-z]+)*\)\s([0-9]+|[A-Za-z]+)",string)
     if not flag: #flag is an empty list and regex doesn't match
         print("error: incorrect option format")
         exit()
     return flag #TODO parse into list 
 
-def file2board(filetable):
+def file2board(filetable):#what is filetable
     for f in filetable:
         if f in board:
             temp = board[f]+filetable[f]
